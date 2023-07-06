@@ -1,0 +1,25 @@
+1.How will you determine which machine learning algorithm to use for a classification problem?
+
+2.How does the Amazon recommendation engine work when recommending other things to buy?
+ 
+3.How would you find thresholds for a classifier?
+
+4.Differentiate between logistic regression and support vector machines. 
+
+5.Give an example of using logistic regression over SVM and vice versa.
+
+6.What does the F1 score represent?
+
+7.Differentiate between correlation and covariance.
+
+8.What are some ways to split a tree in a decision tree algorithm?
+
+9.State the assumptions needed to use linear regression.
+
+10.How do the results change if we use logistic regression over the decision tree in a random forest?
+
+11.What does a ROC area under the curve as an integral represent?
+
+12.Describe linear regression vs. logistic regression. 
+
+13.What are the advantages and disadvantages of SVM?
