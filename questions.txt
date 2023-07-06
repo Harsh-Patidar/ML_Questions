@@ -1,3 +1,5 @@
+Amazon Machine Learning Interview Questions
+
 1.How will you determine which machine learning algorithm to use for a classification problem?
 
 2.How does the Amazon recommendation engine work when recommending other things to buy?
