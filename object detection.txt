@@ -1,0 +1,35 @@
+What is the loss function in YOLO? [src]
+
+💡 YOLO uses a sum of squared error between the predictions and the ground truth to calculate the loss. The loss function composes of:
+
+The Classification loss.
+The Localization loss (errors between the predicted boundary box and the ground truth).
+The Confidence loss (the objectness of the box).
+Loss function = classification loss + localization loss + confidence loss
+
+What is the advantage of two-stage methods? [src]
+
+💡 In two-stage methods like R-CNN, they first predict a few candidate object locations and then use a convolutional neural network to classify each of these candidate object locations as one of the classes or as background.
+
+What is the main problem faced with Single-shot methods?[src][src]
+
+💡 Single-shot methods like SSD suffer from extremely by class imbalance. SSD resamples the ratio of the object class and background class during training so it will not be overwhelmed by an image background.
+
+
+What is Focal Loss in RetinaNet?[src]
+
+💡Focal Loss helps in dealing with class imbalance. Focal loss (FL) adopts an approach to reduce the loss for a well-trained class. So whenever the model is good at detecting background, it will reduce its loss and reemphasize the training on the object class.
+
+What is the Loss function in SSD?[src]
+
+💡SSD’s loss function is a combination of two critical components :
+
+Confidence Loss: This measures how confident the network is of the objectness of the computed bounding box. Categorical cross-entropy is used to compute this loss.
+Location Loss: This measures how far away the network’s predicted bounding boxes are from the ground truth ones from the training set. L2-Norm is used here.
+ssd_loss = confidence_loss + alpha * location_loss
+
+The alpha term helps us to balance the contribution of the location loss.
+
+📌What is FPN?[src]
+
+💡 Feature Pyramid Network (FPN) is a feature extractor designed with a feature pyramid concept to improve accuracy and speed. Images are first to pass through the CNN pathway, yielding semantically rich final layers. Then to regain better resolution, it creates a top-down pathway by upsampling this feature map. While the top-down pathway helps detect objects of varying sizes, spatial positions may be skewed. Lateral connections are added between the original feature maps and the corresponding reconstructed layers to improve object localization. It currently provides one of the leading ways to detect objects at multiple scales, and YOLOv3, Faster R-CNN were build up with this technique.
