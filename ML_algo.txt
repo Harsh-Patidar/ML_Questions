@@ -1,0 +1,126 @@
+1. What pre-processing techniques are you most familiar with in Python?
+Pre-processing techniques are used to prepare data in Python, and there are many different techniques you can use. Some common ones you might talk about include:
+
+Normalization - In Python, normalization is done by adjusting the values in the feature vector.
+Dummy variables - Dummy variables is a pandas technique in which an indicator variable (0 or 1) indicates whether a categorical variable can take a specific value or not.
+Checking for outliers - There are many methods for checking for outliers, but some of the most common are univariate, multivariate, and Minkowski errors.
+2. What are brute force algorithms? Provide an example.
+Brute force algorithms try all possibilities to find a solution. For example, if you were trying to solve a 3-digit pin code, brute force would require you to test all possible combinations from 000 to 999.
+
+One common brute force algorithm is linear search, which traverses an array to check for a match. One disadvantage of brute force algorithms is that they can be inefficient and it’s usually more difficult to improve the performance of the algorithm within the framework.
+
+3. What are some ways to handle an imbalanced dataset?
+An imbalanced dataset has skewed class proportions in a classification problem. Some of the ways to handle this include:
+
+Collecting more data
+Resampling data to correct oversampling or other imbalances
+Generating samples with the Synthetic Minority Oversampling Technique (or SMOTE)
+Testing various algorithms that include resampling in their design, like bagging or boosting
+4. What are some ways to handle missing data in Python?
+There are two common strategies. Omission and Imputation. Omission refers to removing rows or columns with missing values, while imputation refers to adding values to fill in missing observations.
+
+There are some helpful modules in Scikit-learn that you can use for imputation. One is SimpleImputer which fills missing values with a zero, or the median, mean, or mode, while IterativeImputer models each feature with missing values as a function of other features.
+
+5. What is regression? How would you implement regression in Python?
+Regression is a supervised machine learning technique, and it’s primarily used to find correlations between variables, as well as make predictions for the dependent variable. Regression algorithms are generally used for predictions, building forecasts, time-series models, or identifying causation.
+
+Most of these algorithms, like linear regression or logistic regression, can be implemented with Scikit-learn in Python.
+
+6. How do you split training and testing datasets in Python?
+In Python, you can do this with the Scikit-learn module, using the train_test_split function. This is used to split arrays or matrices into random training and testing datasets.
+
+Generally, about 75% of the data will go to the training dataset; however you will likely test different iterations.
+
+Here’s a code example:
+
+X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.4)
+7. What parameters are most important for tree-based learners?
+Some of the most common you could mention include:
+
+max_depth - This is the maximum depth per tree. This adds complexity but at the benefit of boosting performance.
+learning_rate - This determines step size at each iteration. A lower learning rate slows computation, but increases the chance of reaching a model closer to theoptimum.
+n_estimators - This refers to the number of trees in an ensemble, or the number of boosting rounds.
+subsample - This is the fraction of observations to be sampled for each tree.
+8. What are common hyperparameter tuning methods in Scikit-learn?
+The two most commonly used methods are grid search and random search. Grid search is the process of defining a search space grid, and after you’ve selected hyperparameter values, grid search searches for the optimal combination.
+
+Random search uses a wide range of hyperparam values and randomly iterates combinations. With random search, you specify the number of iterations (which you do not do in grid search).
+
+Python Pandas Machine Learning Questions
+In machine learning interviews, Python pandas questions are the most common coding challenge. These questions test your ability to manipulate and prepare data for use in machine learning models and cover techniques like normalization, imputation, and working with dataframes.
+
+This type of Python question has a correct answer, and you will be required to write code in a shared editor or on a whiteboard. Here are some Python Pandas machine learning interview questions:
+
+9. Write a function median_rainfall to find the median amount of rainfall for the days on which it rained.
+More context. You’re given a dataframe df_rain containing rainfall data. The dataframe has two columns: day of the week and rainfall in inches.
+
+With this question, there are two key steps:
+
+Remove all days with no rain.
+Then, get the median of the dataframe.
+10. Write a function to impute the median price of the selected California cheeses in place of the missing values.
+This question requires you to use two built-in pandas methods:
+
+dataframe.column.median()
+This method returns the median of a column in a dataframe.
+
+dataframe.column.fillna(`value`) 
+This method applies value to all nan values in a given column.
+
+11. Write a function to return a new list where all None values are replaced with the most recent non-None value in the list.
+This easy Python question deals with pre-preprocessing. In it, you’re provided with a sorted list of positive integers with some entries being None.
+
+Here’s the solution code for this problem:
+
+def fill_none(input_list):
+    prev_value = 0
+
+    result = []
+    for value in values:
+        if value is None:
+            result.append(prev_value)
+        else:
+            result.append(value)
+            prev_value = value
+
+    return result
+12. Write a function named grades_colors to select only the rows where the student’s favorite color is green or red and their grade is above 90.
+This question requires us to filter a data frame by two conditions: first, the grade of the student, and second, their favorite color.
+
+Start by filtering by grade since it’s a bit simpler than filtering by strings. We can filter columns in pandas by setting our data frame equal to itself with the filter in place.
+
+In this case:
+
+df_students = df_students[df_students["grade"] > 90]
+13. Calculate the t-value for the mean of ‘var’ against a null hypothesis that μ = μ_0.
+This Python question has been asked in Facebook machine-learning interviews.
+
+More context. You are given a dataframe with a single column, var. You do not have to calculate the p-value of the test or run the test.
+
+Machine Learning Algorithms From Scratch Problems
+Problems that ask you to write an algorithm from scratch are increasingly common in machine learning and computer vision interviews. The algorithms you are asked to write are like what you’d see on sci-kit-learn.
+
+In general, this type of question tests your familiarity with an algorithm, as well as your ability to code a bug-free version as efficiently as possible. Most importantly, they test your knowledge of ML concepts by asking you to build the algorithms from scratch. So no more writing: rfr = RandomForest(x,y)
+
+But although this can seem intimidating, remember that 1) interviewers don’t want the most optimized version of an algorithm. Instead, interviewers want the most “vanilla” version of an algorithm that shows you understand the basics.
+
+And 2) you don’t have to study every algorithm. Only a few fit the format of an hour-long on-site interview, as many are too complicated to break down in such a short timeframe.
+
+These are the algorithms you should study for machine learning Python interviews:
+
+K-nearest neighbors
+Decision tree
+Linear regression
+Logistic regression
+K-means clustering
+Gradient descent
+You can practice with these sample machine learning algorithm from scratch interview questions:
+
+14. Build a K-nearest neighbors classification model from scratch with the following conditions:
+Use Euclidean distance (aka, the “2 norm”) as your closeness metric.
+Your function should be able to handle data frames of arbitrarily many rows and columns.
+If there is a tie in the class of the k nearest neighbors, rerun the search using k-1 neighbors instead.
+You may use pandas and numpy but NOT scikit-learn.
+Example Output:
+
+def kNN(k,data,new_point) -> 2
