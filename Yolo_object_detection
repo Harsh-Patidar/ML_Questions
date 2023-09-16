@@ -1,9 +1,17 @@
-What is the loss function in YOLO? [src]
+What is the loss function in YOLO? 
 
 💡 YOLO uses a sum of squared error between the predictions and the ground truth to calculate the loss. The loss function composes of:
-
 The Classification loss.
 The Localization loss (errors between the predicted boundary box and the ground truth).
 The Confidence loss (the objectness of the box).
 Loss function = classification loss + localization loss + confidence loss
 
+
+What is the advantage of two-stage methods?
+💡 In two-stage methods like R-CNN, they first predict a few candidate object locations and then use a
+convolutional neural network to classify each of these candidate object locations as one of the classes or as background
+
+
+What is the main problem faced with Single-shot methods?[src][src]
+💡 Single-shot methods like SSD suffer from extremely by class imbalance. SSD resamples the ratio of the object class and
+background class during training so it will not be overwhelmed by an image background
