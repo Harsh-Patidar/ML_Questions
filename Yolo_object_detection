@@ -1,0 +1,9 @@
+What is the loss function in YOLO? [src]
+
+💡 YOLO uses a sum of squared error between the predictions and the ground truth to calculate the loss. The loss function composes of:
+
+The Classification loss.
+The Localization loss (errors between the predicted boundary box and the ground truth).
+The Confidence loss (the objectness of the box).
+Loss function = classification loss + localization loss + confidence loss
+
